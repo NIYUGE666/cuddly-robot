@@ -279,7 +279,7 @@ project={'meta':{'filename':'waveform.kicad_pro','version':1},'board':{'design_s
 (HW/'waveform.kicad_pro').write_text(json.dumps(project,indent=2))
 (ROOT/'circuit.json').write_text(json.dumps({'revision':'A','supply_V':[12,0,-12],'channels':channels,'parts':parts},ensure_ascii=False,indent=2))
 with (ROOT/'hardware'/'BOM.csv').open('w',newline='') as f:
-    w=csv.writer(f); w.writerow(['Reference','Value','Type','Footprint','Sheet','Notes'])
+    w=csv.writer(f,lineterminator="\n"); w.writerow(['Reference','Value','Type','Footprint','Sheet','Notes'])
     for p in parts:
         if p['kind']!='FLAG': w.writerow([p['ref'],p['value'],p['kind'],p.get('footprint',''),p['sheet'],p['note']])
 print(f'Generated {len(parts)-3} physical components, {len(netnames)} nets, six schematic sheets plus root.')
