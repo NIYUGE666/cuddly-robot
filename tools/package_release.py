@@ -33,7 +33,7 @@ with (hw/'BOM_grouped.csv').open('w',newline='') as f:
  w.writerow(['U1 U3-U16',15,'DIP-8 socket (optional)','ACCESSORY','','7.62mm width'])
  w.writerow(['U2',1,'DIP-14 socket (optional)','ACCESSORY','','7.62mm width'])
 license_path=pathlib.Path('/usr/share/doc/kicad-footprints/copyright')
-if license_path.exists():(hw/'LICENSE_KICAD_FOOTPRINTS.txt').write_text('\n'.join(line.rstrip() for line in license_path.read_text().splitlines())+'\n')
+if license_path.exists():(hw/'LICENSE_KICAD_FOOTPRINTS.txt').write_text('\n'.join(line.rstrip() for line in license_path.read_text().splitlines()).rstrip()+'\n')
 (fab/'README.txt').write_text('Rev A prototype manufacturing output. Source: hardware/waveform.kicad_pcb\n2 layers, FR4 1.6mm, suggested 1oz copper; outline 229 x 231 mm.\nThese are manufacturing graphics, NOT an editable schematic/PCB project.\nNo prototype has been manufactured. Verify dimensions, materials, assembly and import before ordering.\n')
 release=R/'release';release.mkdir(exist_ok=True)
 def pack(name,items):

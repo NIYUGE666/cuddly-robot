@@ -4,17 +4,17 @@
     {
       "name": "waveform_EAGLE_XML_import.zip",
       "bytes": 59694,
-      "sha256": "2f4ecd8d3e44e0431e952bb4b5995a213cf24294694b73dee24239920d852a98"
+      "sha256": "691b17a63958a11354672128440e2a4dccbaf328d2fd294116e8a4244e090feb"
     },
     {
       "name": "waveform_Gerber_prototype.zip",
       "bytes": 135863,
-      "sha256": "c75b1c64aed74a549efb2796b4ed5fdc7e18859b966a323d51a1927e2f9da3e8"
+      "sha256": "20be663583b15a3f070678f4650ac03f1b6745f9a60dcbcdb994baec94809ee6"
     },
     {
       "name": "waveform_KiCad9_import.zip",
       "bytes": 306981,
-      "sha256": "3706eaa8e7ddd301bd03426403276046050cd21aeb30a4b9647abea974d17696"
+      "sha256": "5fdf79bb749f7a8d5ff6b92d5b5b35f86901e30f5f35f077deef4cc0164bbe82"
     }
   ],
   "native_epro_created": false,
