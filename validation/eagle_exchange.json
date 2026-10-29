@@ -1,0 +1,14 @@
+{
+  "XML_parse": true,
+  "schematic_PCB_contactref_agreement": true,
+  "connected_pins": 489,
+  "elements": 190,
+  "track_segments": 2522,
+  "vias": 151,
+  "EAGLE_GUI_import": "NOT RUN",
+  "EasyEDA_Pro_GUI_import": "NOT RUN",
+  "KiCad_DRC_does_not_validate_exchange_import": true,
+  "KiCad_EAGLE_PCB_import": true,
+  "roundtrip_pads_agree": true,
+  "roundtrip_board": "/tmp/waveform-eagle-9gq0z3t9/roundtrip.kicad_pcb"
+}

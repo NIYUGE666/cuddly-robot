@@ -1,0 +1,370 @@
+{
+  "model": "Analytical nodal solution; A0=200000, GBW=3MHz, one-pole TL082 approximation; not vendor SPICE and not measured",
+  "source": "Ideal +/-5 V, 50% duty square at SQ; the NE555/CD4013 startup and supply integrity are not simulated",
+  "channels": {
+    "1": {
+      "frequency_Hz": 1000,
+      "cap_F": 1e-08,
+      "filter_R2_ohm": 534.9227736613477,
+      "filter_pot_used_ohm": 104.92277366134772,
+      "phase_total_R_ohm": 15896.937230123693,
+      "phase_pot_used_ohm": 15796.937230123693,
+      "amplitude_fraction": 0.8804048934738385,
+      "output_peak_V": 6.366197723675814,
+      "phase_deg": 2.0541915431912408e-14
+    },
+    "3": {
+      "frequency_Hz": 3000,
+      "cap_F": 3.3e-09,
+      "filter_R2_ohm": 535.0706989895946,
+      "filter_pot_used_ohm": 105.07069898959458,
+      "phase_total_R_ohm": 16020.08880411437,
+      "phase_pot_used_ohm": 15920.08880411437,
+      "amplitude_fraction": 0.8810981182169975,
+      "output_peak_V": 2.122065907891938,
+      "phase_deg": -1.165834177004223e-14
+    },
+    "5": {
+      "frequency_Hz": 5000,
+      "cap_F": 2e-09,
+      "filter_R2_ohm": 513.554962654647,
+      "filter_pot_used_ohm": 83.55496265464706,
+      "phase_total_R_ohm": 15822.924823247153,
+      "phase_pot_used_ohm": 15722.924823247153,
+      "amplitude_fraction": 0.8827393276880572,
+      "output_peak_V": 1.2732395447351628,
+      "phase_deg": 3.8385165836584876e-16
+    },
+    "7": {
+      "frequency_Hz": 7000,
+      "cap_F": 1.5e-09,
+      "filter_R2_ohm": 454.3372282631333,
+      "filter_pot_used_ohm": 24.337228263133284,
+      "phase_total_R_ohm": 15034.331112072448,
+      "phase_pot_used_ohm": 14934.331112072448,
+      "amplitude_fraction": 0.8860098764802045,
+      "output_peak_V": 0.9094568176679735,
+      "phase_deg": 1.320938840841575e-16
+    }
+  },
+  "spectrum": [
+    {
+      "order": 1,
+      "frequency_Hz": 1000,
+      "peak_V": 6.361728440627611,
+      "phase_deg": -0.17836853481985543
+    },
+    {
+      "order": 3,
+      "frequency_Hz": 3000,
+      "peak_V": 2.114888718943909,
+      "phase_deg": -0.5816727472890784
+    },
+    {
+      "order": 5,
+      "frequency_Hz": 5000,
+      "peak_V": 1.2602552670560208,
+      "phase_deg": -0.6958818045040557
+    },
+    {
+      "order": 7,
+      "frequency_Hz": 7000,
+      "peak_V": 0.9013318039353185,
+      "phase_deg": -0.6268302661166324
+    },
+    {
+      "order": 9,
+      "frequency_Hz": 9000,
+      "peak_V": 0.011277374284538837,
+      "phase_deg": 154.17992445986673
+    },
+    {
+      "order": 11,
+      "frequency_Hz": 11000,
+      "peak_V": 0.0031527814670691268,
+      "phase_deg": 122.04110952167453
+    },
+    {
+      "order": 13,
+      "frequency_Hz": 13000,
+      "peak_V": 0.0014638545099800195,
+      "phase_deg": 101.61149076653554
+    },
+    {
+      "order": 15,
+      "frequency_Hz": 15000,
+      "peak_V": 0.0008312108688908449,
+      "phase_deg": 86.83023609681945
+    },
+    {
+      "order": 17,
+      "frequency_Hz": 17000,
+      "peak_V": 0.0005268736578981621,
+      "phase_deg": 75.47520678082597
+    },
+    {
+      "order": 19,
+      "frequency_Hz": 19000,
+      "peak_V": 0.00035838034632257575,
+      "phase_deg": 66.40722797194493
+    },
+    {
+      "order": 21,
+      "frequency_Hz": 21000,
+      "peak_V": 0.0002562076682578402,
+      "phase_deg": 58.955940135512314
+    },
+    {
+      "order": 23,
+      "frequency_Hz": 23000,
+      "peak_V": 0.00019013261454878597,
+      "phase_deg": 52.69432394792769
+    },
+    {
+      "order": 25,
+      "frequency_Hz": 25000,
+      "peak_V": 0.00014528720957579535,
+      "phase_deg": 47.335330820046714
+    },
+    {
+      "order": 27,
+      "frequency_Hz": 27000,
+      "peak_V": 0.00011367712745106853,
+      "phase_deg": 42.67810811486569
+    },
+    {
+      "order": 29,
+      "frequency_Hz": 29000,
+      "peak_V": 9.070457229371627e-05,
+      "phase_deg": 38.57760087752318
+    },
+    {
+      "order": 31,
+      "frequency_Hz": 31000,
+      "peak_V": 7.358137228903567e-05,
+      "phase_deg": 34.926305062216485
+    },
+    {
+      "order": 33,
+      "frequency_Hz": 33000,
+      "peak_V": 6.054260282879352e-05,
+      "phase_deg": 31.64279689721656
+    },
+    {
+      "order": 35,
+      "frequency_Hz": 35000,
+      "peak_V": 5.043058801589274e-05,
+      "phase_deg": 28.66424905274374
+    },
+    {
+      "order": 37,
+      "frequency_Hz": 37000,
+      "peak_V": 4.246279240415264e-05,
+      "phase_deg": 25.941395089425363
+    },
+    {
+      "order": 39,
+      "frequency_Hz": 39000,
+      "peak_V": 3.609643988214108e-05,
+      "phase_deg": 23.435051428304167
+    },
+    {
+      "order": 41,
+      "frequency_Hz": 41000,
+      "peak_V": 3.0946524930679645e-05,
+      "phase_deg": 21.113660185292407
+    },
+    {
+      "order": 43,
+      "frequency_Hz": 43000,
+      "peak_V": 2.6734527728767693e-05,
+      "phase_deg": 18.951518538264928
+    },
+    {
+      "order": 45,
+      "frequency_Hz": 45000,
+      "peak_V": 2.3255419520115766e-05,
+      "phase_deg": 16.927480268522473
+    },
+    {
+      "order": 47,
+      "frequency_Hz": 47000,
+      "peak_V": 2.0355903451397384e-05,
+      "phase_deg": 15.023988554283964
+    },
+    {
+      "order": 49,
+      "frequency_Hz": 49000,
+      "peak_V": 1.791974644459441e-05,
+      "phase_deg": 13.22634530199167
+    },
+    {
+      "order": 51,
+      "frequency_Hz": 51000,
+      "peak_V": 1.5857695224120448e-05,
+      "phase_deg": 11.522152092076855
+    },
+    {
+      "order": 53,
+      "frequency_Hz": 53000,
+      "peak_V": 1.4100420254702563e-05,
+      "phase_deg": 9.900877442205033
+    },
+    {
+      "order": 55,
+      "frequency_Hz": 55000,
+      "peak_V": 1.25934987626806e-05,
+      "phase_deg": 8.353518274418743
+    },
+    {
+      "order": 57,
+      "frequency_Hz": 57000,
+      "peak_V": 1.1293795237595335e-05,
+      "phase_deg": 6.872332484934829
+    },
+    {
+      "order": 59,
+      "frequency_Hz": 59000,
+      "peak_V": 1.0166815120517308e-05,
+      "phase_deg": 5.450625775477952
+    },
+    {
+      "order": 61,
+      "frequency_Hz": 61000,
+      "peak_V": 9.184746190259666e-06,
+      "phase_deg": 4.082580317411479
+    },
+    {
+      "order": 63,
+      "frequency_Hz": 63000,
+      "peak_V": 8.324992483260827e-06,
+      "phase_deg": 2.7631159719754517
+    },
+    {
+      "order": 65,
+      "frequency_Hz": 65000,
+      "peak_V": 7.5690653701168936e-06,
+      "phase_deg": 1.4877770697275183
+    },
+    {
+      "order": 67,
+      "frequency_Hz": 67000,
+      "peak_V": 6.90173661096987e-06,
+      "phase_deg": 0.25263942021593333
+    },
+    {
+      "order": 69,
+      "frequency_Hz": 69000,
+      "peak_V": 6.310385634872651e-06,
+      "phase_deg": -0.9457665437112978
+    },
+    {
+      "order": 71,
+      "frequency_Hz": 71000,
+      "peak_V": 5.784492248079809e-06,
+      "phase_deg": -2.110519661411964
+    },
+    {
+      "order": 73,
+      "frequency_Hz": 73000,
+      "peak_V": 5.31523924922004e-06,
+      "phase_deg": -3.244361459843049
+    },
+    {
+      "order": 75,
+      "frequency_Hz": 75000,
+      "peak_V": 4.895198829807246e-06,
+      "phase_deg": -4.349741040904129
+    },
+    {
+      "order": 77,
+      "frequency_Hz": 77000,
+      "peak_V": 4.518083369079468e-06,
+      "phase_deg": -5.4288529879936265
+    },
+    {
+      "order": 79,
+      "frequency_Hz": 79000,
+      "peak_V": 4.178546100337143e-06,
+      "phase_deg": -6.4836695263051
+    },
+    {
+      "order": 81,
+      "frequency_Hz": 81000,
+      "peak_V": 3.872020680903788e-06,
+      "phase_deg": -7.51596792802371
+    },
+    {
+      "order": 83,
+      "frequency_Hz": 83000,
+      "peak_V": 3.594591317251418e-06,
+      "phase_deg": -8.527353962894933
+    },
+    {
+      "order": 85,
+      "frequency_Hz": 85000,
+      "peak_V": 3.342887043346756e-06,
+      "phase_deg": -9.51928204425469
+    },
+    {
+      "order": 87,
+      "frequency_Hz": 87000,
+      "peak_V": 3.1139952083730517e-06,
+      "phase_deg": -10.493072601283373
+    },
+    {
+      "order": 89,
+      "frequency_Hz": 89000,
+      "peak_V": 2.9053903305223983e-06,
+      "phase_deg": -11.449927113007721
+    },
+    {
+      "order": 91,
+      "frequency_Hz": 91000,
+      "peak_V": 2.7148753102011937e-06,
+      "phase_deg": -12.390941163139807
+    },
+    {
+      "order": 93,
+      "frequency_Hz": 93000,
+      "peak_V": 2.540532636371171e-06,
+      "phase_deg": -13.317115813175086
+    },
+    {
+      "order": 95,
+      "frequency_Hz": 95000,
+      "peak_V": 2.3806837130872978e-06,
+      "phase_deg": -14.229367541167857
+    },
+    {
+      "order": 97,
+      "frequency_Hz": 97000,
+      "peak_V": 2.233854815703557e-06,
+      "phase_deg": -15.128536952860129
+    },
+    {
+      "order": 99,
+      "frequency_Hz": 99000,
+      "peak_V": 2.098748484386743e-06,
+      "phase_deg": -16.015396438495177
+    },
+    {
+      "order": 101,
+      "frequency_Hz": 101000,
+      "peak_V": 1.9742193963709654e-06,
+      "phase_deg": -16.89065692123219
+    }
+  ],
+  "waveform_peak_V": 5.9188526154855845,
+  "waveform_Vpp": 11.837705230971178,
+  "max_selected_harmonic_ratio_error_percent": 0.9502465550312533,
+  "max_output_slew_V_per_us": 0.15861169029318492,
+  "ideal_four_term_Vpp": 11.84225133378051,
+  "checks_passed": true,
+  "limitations": [
+    "No component tolerance Monte Carlo",
+    "No vendor nonlinear IC model",
+    "No hardware or EasyEDA GUI validation",
+    "Calibration is required; fixed untrimmed parts do not satisfy the targets automatically"
+  ]
+}

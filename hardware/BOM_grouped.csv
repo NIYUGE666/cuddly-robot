@@ -1,0 +1,48 @@
+References,Quantity,Value,Type,Footprint,Purchasing_notes
+U2,1,CD4013BE,4013,Waveform:DIP-14_W7.62mm,"Through-hole DIP, 7.62mm row spacing; do not substitute a different pinout"
+C22 C23 C24 C25 C26 C27,6,1.5n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,5mm pitch; BPF/all-pass: 1% C0G/film; bypass: X7R permitted
+C30 C31 C32 C33 C34 C35 C36 C37 C38 C39 C40 C41 C42 C43 C44 C45 C46 C47 C48 C49 C50 C51 C52 C53 C54 C55 C56 C57 C58 C59,30,100n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,5mm pitch; BPF/all-pass: 1% C0G/film; bypass: X7R permitted
+C1 C2 C4 C5 C6 C7 C8 C9,8,10n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,5mm pitch; BPF/all-pass: 1% C0G/film; bypass: X7R permitted
+C16 C17 C18 C19 C20 C21,6,2n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,5mm pitch; BPF/all-pass: 1% C0G/film; bypass: X7R permitted
+C10 C11 C12 C13 C14 C15,6,3.3n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,5mm pitch; BPF/all-pass: 1% C0G/film; bypass: X7R permitted
+J6,1,WAVE_OUT,CONN2,Waveform:PinHeader_1x02_P2.54mm_Vertical,2.54mm through-hole header; phase headers additionally require ONE shunt each
+J1 J2 J3 J4,4,PHASE_POLARITY,CONN3,Waveform:PinHeader_1x03_P2.54mm_Vertical,2.54mm through-hole header; phase headers additionally require ONE shunt each
+J5,1,POWER_12V,CONN3,Waveform:PinHeader_1x03_P2.54mm_Vertical,2.54mm through-hole header; phase headers additionally require ONE shunt each
+C3,1,10u/25V,CP,Waveform:CP_Radial_D5.0mm_P2.00mm,"25V minimum, D5mm P2mm; verify purchased body diameter and polarity"
+C28 C29,2,47u/25V,CP,Waveform:CP_Radial_D5.0mm_P2.00mm,"25V minimum, D5mm P2mm; verify purchased body diameter and polarity"
+U1,1,NE555P,NE555,Waveform:DIP-8_W7.62mm,"Through-hole DIP, 7.62mm row spacing; do not substitute a different pinout"
+RV2,1,100k,POT,Waveform:Potentiometer_Bourns_3296W_Vertical,"Bourns 3296W vertical, value code 104; verify pinout 1/2(wiper)/3"
+RV7 RV12 RV17 RV22,4,10k,POT,Waveform:Potentiometer_Bourns_3296W_Vertical,"Bourns 3296W vertical, value code 103; verify pinout 1/2(wiper)/3"
+RV3 RV4 RV8 RV9 RV13 RV14 RV18 RV19,8,200,POT,Waveform:Potentiometer_Bourns_3296W_Vertical,"Bourns 3296W vertical, value code 201; verify pinout 1/2(wiper)/3"
+RV5 RV6 RV10 RV11 RV15 RV16 RV20 RV21,8,200k,POT,Waveform:Potentiometer_Bourns_3296W_Vertical,"Bourns 3296W vertical, value code 204; verify pinout 1/2(wiper)/3"
+RV1,1,20k,POT,Waveform:Potentiometer_Bourns_3296W_Vertical,"Bourns 3296W vertical, value code 203; verify pinout 1/2(wiper)/3"
+R14 R17 R28 R31 R42 R45 R56 R59 R69,9,100,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,"DIN0207 7.62mm pitch; 0.1% recommended for matched gains, 1% otherwise"
+R4 R5 R62 R63 R64 R65 R66 R67 R68,9,100k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,"DIN0207 7.62mm pitch; 0.1% recommended for matched gains, 1% otherwise"
+R1 R12 R13 R15 R16 R18 R19 R26 R27 R29 R30 R32 R33 R40 R41 R43 R44 R46 R47 R54 R55 R57 R58 R60 R61,25,10k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,"DIN0207 7.62mm pitch; 0.1% recommended for matched gains, 1% otherwise"
+R3,1,1M,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,"DIN0207 7.62mm pitch; 0.1% recommended for matched gains, 1% otherwise"
+R6 R9 R20 R23 R34 R37 R48 R51,8,220k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,"DIN0207 7.62mm pitch; 0.1% recommended for matched gains, 1% otherwise"
+R2,1,27k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,"DIN0207 7.62mm pitch; 0.1% recommended for matched gains, 1% otherwise"
+R7 R10 R21 R24 R35 R38 R49 R52,8,430,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,"DIN0207 7.62mm pitch; 0.1% recommended for matched gains, 1% otherwise"
+R8 R11 R22 R25 R36 R39 R50 R53,8,470k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,"DIN0207 7.62mm pitch; 0.1% recommended for matched gains, 1% otherwise"
+U3 U4 U5 U6 U7 U8 U9 U10 U11 U12 U13 U14 U15 U16,14,TL082CP,TL082,Waveform:DIP-8_W7.62mm,"Through-hole DIP, 7.62mm row spacing; do not substitute a different pinout"
+TP1,1,CLOCK_2K,TP,Waveform:TestPoint_THTPad_D1.5mm_Drill0.7mm,"Bare PCB test pad, no component purchase required"
+TP18,1,GND,TP,Waveform:TestPoint_THTPad_D1.5mm_Drill0.7mm,"Bare PCB test pad, no component purchase required"
+TP5,1,H1_AP2,TP,Waveform:TestPoint_THTPad_D1.5mm_Drill0.7mm,"Bare PCB test pad, no component purchase required"
+TP4,1,H1_BPF2,TP,Waveform:TestPoint_THTPad_D1.5mm_Drill0.7mm,"Bare PCB test pad, no component purchase required"
+TP6,1,H1_OUT,TP,Waveform:TestPoint_THTPad_D1.5mm_Drill0.7mm,"Bare PCB test pad, no component purchase required"
+TP8,1,H3_AP2,TP,Waveform:TestPoint_THTPad_D1.5mm_Drill0.7mm,"Bare PCB test pad, no component purchase required"
+TP7,1,H3_BPF2,TP,Waveform:TestPoint_THTPad_D1.5mm_Drill0.7mm,"Bare PCB test pad, no component purchase required"
+TP9,1,H3_OUT,TP,Waveform:TestPoint_THTPad_D1.5mm_Drill0.7mm,"Bare PCB test pad, no component purchase required"
+TP11,1,H5_AP2,TP,Waveform:TestPoint_THTPad_D1.5mm_Drill0.7mm,"Bare PCB test pad, no component purchase required"
+TP10,1,H5_BPF2,TP,Waveform:TestPoint_THTPad_D1.5mm_Drill0.7mm,"Bare PCB test pad, no component purchase required"
+TP12,1,H5_OUT,TP,Waveform:TestPoint_THTPad_D1.5mm_Drill0.7mm,"Bare PCB test pad, no component purchase required"
+TP14,1,H7_AP2,TP,Waveform:TestPoint_THTPad_D1.5mm_Drill0.7mm,"Bare PCB test pad, no component purchase required"
+TP13,1,H7_BPF2,TP,Waveform:TestPoint_THTPad_D1.5mm_Drill0.7mm,"Bare PCB test pad, no component purchase required"
+TP15,1,H7_OUT,TP,Waveform:TestPoint_THTPad_D1.5mm_Drill0.7mm,"Bare PCB test pad, no component purchase required"
+TP17,1,OUT,TP,Waveform:TestPoint_THTPad_D1.5mm_Drill0.7mm,"Bare PCB test pad, no component purchase required"
+TP2,1,SQ,TP,Waveform:TestPoint_THTPad_D1.5mm_Drill0.7mm,"Bare PCB test pad, no component purchase required"
+TP3,1,SQ_INV,TP,Waveform:TestPoint_THTPad_D1.5mm_Drill0.7mm,"Bare PCB test pad, no component purchase required"
+TP16,1,SUM_RAW,TP,Waveform:TestPoint_THTPad_D1.5mm_Drill0.7mm,"Bare PCB test pad, no component purchase required"
+J1 J2 J3 J4,4,2.54mm shunt,ACCESSORY,,"One shunt per phase header, default pins 2-3"
+U1 U3-U16,15,DIP-8 socket (optional),ACCESSORY,,7.62mm width
+U2,1,DIP-14 socket (optional),ACCESSORY,,7.62mm width

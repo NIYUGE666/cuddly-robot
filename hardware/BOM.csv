@@ -1,0 +1,191 @@
+Reference,Value,Type,Footprint,Sheet,Notes
+U1,NE555P,NE555,Waveform:DIP-8_W7.62mm,source,
+U2,CD4013BE,4013,Waveform:DIP-14_W7.62mm,source,
+R1,10k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,source,1% RA
+R2,27k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,source,
+RV1,20k,POT,Waveform:Potentiometer_Bourns_3296W_Vertical,source,Frequency: nominal 4.07k used; wiper strapped to pin 3
+C1,10n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,source,"C0G or film, 1%"
+C2,10n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,source,
+C3,10u/25V,CP,Waveform:CP_Radial_D5.0mm_P2.00mm,source,Positive toward CD4013; DC removal
+R3,1M,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,source,
+RV2,100k,POT,Waveform:Potentiometer_Bourns_3296W_Vertical,source,Set SQ to 10.00 Vpp
+U3,TL082CP,TL082,Waveform:DIP-8_W7.62mm,source,
+R4,100k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,source,
+R5,100k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,source,
+TP1,CLOCK_2K,TP,Waveform:TestPoint_THTPad_D1.5mm_Drill0.7mm,source,
+TP2,SQ,TP,Waveform:TestPoint_THTPad_D1.5mm_Drill0.7mm,source,
+TP3,SQ_INV,TP,Waveform:TestPoint_THTPad_D1.5mm_Drill0.7mm,source,
+R6,220k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_1,"MFB R1, 0.1% preferred"
+R7,430,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_1,
+RV3,200,POT,Waveform:Potentiometer_Bourns_3296W_Vertical,harmonic_1,Tune section 1 to 1 kHz; wiper strapped to pin 3
+R8,470k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_1,"MFB R3, 0.1% preferred"
+C4,10n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,harmonic_1,"MFB C1: C0G/film 1%, match C2"
+C5,10n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,harmonic_1,"MFB C2: C0G/film 1%, match C1"
+R9,220k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_1,"MFB R1, 0.1% preferred"
+R10,430,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_1,
+RV4,200,POT,Waveform:Potentiometer_Bourns_3296W_Vertical,harmonic_1,Tune section 2 to 1 kHz; wiper strapped to pin 3
+R11,470k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_1,"MFB R3, 0.1% preferred"
+C6,10n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,harmonic_1,"MFB C1: C0G/film 1%, match C2"
+C7,10n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,harmonic_1,"MFB C2: C0G/film 1%, match C1"
+U4,TL082CP,TL082,Waveform:DIP-8_W7.62mm,harmonic_1,
+R12,10k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_1,
+R13,10k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_1,
+R14,100,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_1,
+RV5,200k,POT,Waveform:Potentiometer_Bourns_3296W_Vertical,harmonic_1,All-pass phase adjust; wiper strapped to pin 3
+C8,10n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,harmonic_1,"All-pass capacitor, C0G/film 1%"
+R15,10k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_1,
+R16,10k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_1,
+R17,100,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_1,
+RV6,200k,POT,Waveform:Potentiometer_Bourns_3296W_Vertical,harmonic_1,All-pass phase adjust; wiper strapped to pin 3
+C9,10n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,harmonic_1,"All-pass capacitor, C0G/film 1%"
+U5,TL082CP,TL082,Waveform:DIP-8_W7.62mm,harmonic_1,
+R18,10k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_1,
+R19,10k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_1,
+J1,PHASE_POLARITY,CONN3,Waveform:PinHeader_1x03_P2.54mm_Vertical,harmonic_1,"Fit ONE shunt: default 2-3 (inverted), optional 1-2"
+RV7,10k,POT,Waveform:Potentiometer_Bourns_3296W_Vertical,harmonic_1,"Amplitude trim, nominal fraction 0.8764"
+U6,TL082CP,TL082,Waveform:DIP-8_W7.62mm,harmonic_1,
+TP4,H1_BPF2,TP,Waveform:TestPoint_THTPad_D1.5mm_Drill0.7mm,harmonic_1,
+TP5,H1_AP2,TP,Waveform:TestPoint_THTPad_D1.5mm_Drill0.7mm,harmonic_1,
+TP6,H1_OUT,TP,Waveform:TestPoint_THTPad_D1.5mm_Drill0.7mm,harmonic_1,
+R20,220k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_3,"MFB R1, 0.1% preferred"
+R21,430,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_3,
+RV8,200,POT,Waveform:Potentiometer_Bourns_3296W_Vertical,harmonic_3,Tune section 1 to 3 kHz; wiper strapped to pin 3
+R22,470k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_3,"MFB R3, 0.1% preferred"
+C10,3.3n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,harmonic_3,"MFB C1: C0G/film 1%, match C2"
+C11,3.3n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,harmonic_3,"MFB C2: C0G/film 1%, match C1"
+R23,220k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_3,"MFB R1, 0.1% preferred"
+R24,430,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_3,
+RV9,200,POT,Waveform:Potentiometer_Bourns_3296W_Vertical,harmonic_3,Tune section 2 to 3 kHz; wiper strapped to pin 3
+R25,470k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_3,"MFB R3, 0.1% preferred"
+C12,3.3n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,harmonic_3,"MFB C1: C0G/film 1%, match C2"
+C13,3.3n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,harmonic_3,"MFB C2: C0G/film 1%, match C1"
+U7,TL082CP,TL082,Waveform:DIP-8_W7.62mm,harmonic_3,
+R26,10k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_3,
+R27,10k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_3,
+R28,100,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_3,
+RV10,200k,POT,Waveform:Potentiometer_Bourns_3296W_Vertical,harmonic_3,All-pass phase adjust; wiper strapped to pin 3
+C14,3.3n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,harmonic_3,"All-pass capacitor, C0G/film 1%"
+R29,10k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_3,
+R30,10k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_3,
+R31,100,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_3,
+RV11,200k,POT,Waveform:Potentiometer_Bourns_3296W_Vertical,harmonic_3,All-pass phase adjust; wiper strapped to pin 3
+C15,3.3n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,harmonic_3,"All-pass capacitor, C0G/film 1%"
+U8,TL082CP,TL082,Waveform:DIP-8_W7.62mm,harmonic_3,
+R32,10k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_3,
+R33,10k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_3,
+J2,PHASE_POLARITY,CONN3,Waveform:PinHeader_1x03_P2.54mm_Vertical,harmonic_3,"Fit ONE shunt: default 2-3 (inverted), optional 1-2"
+RV12,10k,POT,Waveform:Potentiometer_Bourns_3296W_Vertical,harmonic_3,"Amplitude trim, nominal fraction 0.8764"
+U9,TL082CP,TL082,Waveform:DIP-8_W7.62mm,harmonic_3,
+TP7,H3_BPF2,TP,Waveform:TestPoint_THTPad_D1.5mm_Drill0.7mm,harmonic_3,
+TP8,H3_AP2,TP,Waveform:TestPoint_THTPad_D1.5mm_Drill0.7mm,harmonic_3,
+TP9,H3_OUT,TP,Waveform:TestPoint_THTPad_D1.5mm_Drill0.7mm,harmonic_3,
+R34,220k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_5,"MFB R1, 0.1% preferred"
+R35,430,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_5,
+RV13,200,POT,Waveform:Potentiometer_Bourns_3296W_Vertical,harmonic_5,Tune section 1 to 5 kHz; wiper strapped to pin 3
+R36,470k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_5,"MFB R3, 0.1% preferred"
+C16,2n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,harmonic_5,"MFB C1: C0G/film 1%, match C2"
+C17,2n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,harmonic_5,"MFB C2: C0G/film 1%, match C1"
+R37,220k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_5,"MFB R1, 0.1% preferred"
+R38,430,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_5,
+RV14,200,POT,Waveform:Potentiometer_Bourns_3296W_Vertical,harmonic_5,Tune section 2 to 5 kHz; wiper strapped to pin 3
+R39,470k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_5,"MFB R3, 0.1% preferred"
+C18,2n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,harmonic_5,"MFB C1: C0G/film 1%, match C2"
+C19,2n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,harmonic_5,"MFB C2: C0G/film 1%, match C1"
+U10,TL082CP,TL082,Waveform:DIP-8_W7.62mm,harmonic_5,
+R40,10k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_5,
+R41,10k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_5,
+R42,100,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_5,
+RV15,200k,POT,Waveform:Potentiometer_Bourns_3296W_Vertical,harmonic_5,All-pass phase adjust; wiper strapped to pin 3
+C20,2n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,harmonic_5,"All-pass capacitor, C0G/film 1%"
+R43,10k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_5,
+R44,10k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_5,
+R45,100,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_5,
+RV16,200k,POT,Waveform:Potentiometer_Bourns_3296W_Vertical,harmonic_5,All-pass phase adjust; wiper strapped to pin 3
+C21,2n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,harmonic_5,"All-pass capacitor, C0G/film 1%"
+U11,TL082CP,TL082,Waveform:DIP-8_W7.62mm,harmonic_5,
+R46,10k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_5,
+R47,10k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_5,
+J3,PHASE_POLARITY,CONN3,Waveform:PinHeader_1x03_P2.54mm_Vertical,harmonic_5,"Fit ONE shunt: default 2-3 (inverted), optional 1-2"
+RV17,10k,POT,Waveform:Potentiometer_Bourns_3296W_Vertical,harmonic_5,"Amplitude trim, nominal fraction 0.8764"
+U12,TL082CP,TL082,Waveform:DIP-8_W7.62mm,harmonic_5,
+TP10,H5_BPF2,TP,Waveform:TestPoint_THTPad_D1.5mm_Drill0.7mm,harmonic_5,
+TP11,H5_AP2,TP,Waveform:TestPoint_THTPad_D1.5mm_Drill0.7mm,harmonic_5,
+TP12,H5_OUT,TP,Waveform:TestPoint_THTPad_D1.5mm_Drill0.7mm,harmonic_5,
+R48,220k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_7,"MFB R1, 0.1% preferred"
+R49,430,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_7,
+RV18,200,POT,Waveform:Potentiometer_Bourns_3296W_Vertical,harmonic_7,Tune section 1 to 7 kHz; wiper strapped to pin 3
+R50,470k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_7,"MFB R3, 0.1% preferred"
+C22,1.5n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,harmonic_7,"MFB C1: C0G/film 1%, match C2"
+C23,1.5n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,harmonic_7,"MFB C2: C0G/film 1%, match C1"
+R51,220k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_7,"MFB R1, 0.1% preferred"
+R52,430,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_7,
+RV19,200,POT,Waveform:Potentiometer_Bourns_3296W_Vertical,harmonic_7,Tune section 2 to 7 kHz; wiper strapped to pin 3
+R53,470k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_7,"MFB R3, 0.1% preferred"
+C24,1.5n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,harmonic_7,"MFB C1: C0G/film 1%, match C2"
+C25,1.5n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,harmonic_7,"MFB C2: C0G/film 1%, match C1"
+U13,TL082CP,TL082,Waveform:DIP-8_W7.62mm,harmonic_7,
+R54,10k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_7,
+R55,10k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_7,
+R56,100,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_7,
+RV20,200k,POT,Waveform:Potentiometer_Bourns_3296W_Vertical,harmonic_7,All-pass phase adjust; wiper strapped to pin 3
+C26,1.5n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,harmonic_7,"All-pass capacitor, C0G/film 1%"
+R57,10k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_7,
+R58,10k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_7,
+R59,100,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_7,
+RV21,200k,POT,Waveform:Potentiometer_Bourns_3296W_Vertical,harmonic_7,All-pass phase adjust; wiper strapped to pin 3
+C27,1.5n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,harmonic_7,"All-pass capacitor, C0G/film 1%"
+U14,TL082CP,TL082,Waveform:DIP-8_W7.62mm,harmonic_7,
+R60,10k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_7,
+R61,10k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,harmonic_7,
+J4,PHASE_POLARITY,CONN3,Waveform:PinHeader_1x03_P2.54mm_Vertical,harmonic_7,"Fit ONE shunt: default 2-3 (inverted), optional 1-2"
+RV22,10k,POT,Waveform:Potentiometer_Bourns_3296W_Vertical,harmonic_7,"Amplitude trim, nominal fraction 0.8764"
+U15,TL082CP,TL082,Waveform:DIP-8_W7.62mm,harmonic_7,
+TP13,H7_BPF2,TP,Waveform:TestPoint_THTPad_D1.5mm_Drill0.7mm,harmonic_7,
+TP14,H7_AP2,TP,Waveform:TestPoint_THTPad_D1.5mm_Drill0.7mm,harmonic_7,
+TP15,H7_OUT,TP,Waveform:TestPoint_THTPad_D1.5mm_Drill0.7mm,harmonic_7,
+R62,100k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,power_sum,Matched 0.1% summing resistors
+R63,100k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,power_sum,Matched 0.1% summing resistors
+R64,100k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,power_sum,Matched 0.1% summing resistors
+R65,100k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,power_sum,Matched 0.1% summing resistors
+R66,100k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,power_sum,
+R67,100k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,power_sum,
+R68,100k,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,power_sum,
+U16,TL082CP,TL082,Waveform:DIP-8_W7.62mm,power_sum,
+R69,100,R,Waveform:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal,power_sum,Output isolation: external load >=100k for <0.1% amplitude error
+TP16,SUM_RAW,TP,Waveform:TestPoint_THTPad_D1.5mm_Drill0.7mm,power_sum,
+TP17,OUT,TP,Waveform:TestPoint_THTPad_D1.5mm_Drill0.7mm,power_sum,
+TP18,GND,TP,Waveform:TestPoint_THTPad_D1.5mm_Drill0.7mm,power_sum,
+J5,POWER_12V,CONN3,Waveform:PinHeader_1x03_P2.54mm_Vertical,power_sum,Pin 1 +12 V; pin 2 ground; pin 3 -12 V
+J6,WAVE_OUT,CONN2,Waveform:PinHeader_1x02_P2.54mm_Vertical,power_sum,
+C28,47u/25V,CP,Waveform:CP_Radial_D5.0mm_P2.00mm,power_sum,
+C29,47u/25V,CP,Waveform:CP_Radial_D5.0mm_P2.00mm,power_sum,"Positive to GND, negative to -12 V"
+C30,100n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,power_sum,Place at U1 supply pin
+C31,100n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,power_sum,Place at U2 supply pin
+C32,100n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,power_sum,Place at U3 supply pin
+C33,100n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,power_sum,Place at U3 negative supply pin
+C34,100n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,power_sum,Place at U4 supply pin
+C35,100n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,power_sum,Place at U4 negative supply pin
+C36,100n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,power_sum,Place at U5 supply pin
+C37,100n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,power_sum,Place at U5 negative supply pin
+C38,100n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,power_sum,Place at U6 supply pin
+C39,100n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,power_sum,Place at U6 negative supply pin
+C40,100n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,power_sum,Place at U7 supply pin
+C41,100n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,power_sum,Place at U7 negative supply pin
+C42,100n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,power_sum,Place at U8 supply pin
+C43,100n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,power_sum,Place at U8 negative supply pin
+C44,100n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,power_sum,Place at U9 supply pin
+C45,100n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,power_sum,Place at U9 negative supply pin
+C46,100n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,power_sum,Place at U10 supply pin
+C47,100n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,power_sum,Place at U10 negative supply pin
+C48,100n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,power_sum,Place at U11 supply pin
+C49,100n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,power_sum,Place at U11 negative supply pin
+C50,100n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,power_sum,Place at U12 supply pin
+C51,100n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,power_sum,Place at U12 negative supply pin
+C52,100n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,power_sum,Place at U13 supply pin
+C53,100n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,power_sum,Place at U13 negative supply pin
+C54,100n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,power_sum,Place at U14 supply pin
+C55,100n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,power_sum,Place at U14 negative supply pin
+C56,100n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,power_sum,Place at U15 supply pin
+C57,100n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,power_sum,Place at U15 negative supply pin
+C58,100n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,power_sum,Place at U16 supply pin
+C59,100n,C,Waveform:C_Disc_D5.0mm_W2.5mm_P5.00mm,power_sum,Place at U16 negative supply pin

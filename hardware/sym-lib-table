@@ -1,0 +1,1 @@
+(sym_lib_table (lib (name "Waveform") (type "KiCad") (uri "${KIPRJMOD}/Waveform.kicad_sym") (options "") (descr "Self-contained design symbols")))

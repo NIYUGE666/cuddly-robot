@@ -1,0 +1,22 @@
+{
+  "ZIP_CRC_checks_passed": true,
+  "files": [
+    {
+      "name": "waveform_EAGLE_XML_import.zip",
+      "bytes": 59709,
+      "sha256": "cf811931c58788d81bbcb09a0e93308c76121671903098bb8e0e16253b406509"
+    },
+    {
+      "name": "waveform_Gerber_prototype.zip",
+      "bytes": 135863,
+      "sha256": "397a33484c393eedcc7c48662239c7c37b64e75f7d2d277772b75b9117cb4d3a"
+    },
+    {
+      "name": "waveform_KiCad9_import.zip",
+      "bytes": 306996,
+      "sha256": "2cd336222d6aea8fd08d0bf7e589f561d28f8119be25580764b41a175eec15f0"
+    }
+  ],
+  "native_epro_created": false,
+  "EasyEDA_Pro_GUI_import": "NOT RUN"
+}

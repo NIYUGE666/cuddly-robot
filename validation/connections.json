@@ -1,0 +1,11 @@
+{
+  "physical_footprints": 190,
+  "pins_compared": 491,
+  "schematic_nets": 106,
+  "copper_layers": 2,
+  "tracks": 2522,
+  "vias": 151,
+  "TL082_packages": 14,
+  "manifest_schematic_PCB_pin_agreement": true,
+  "topology_checks": true
+}

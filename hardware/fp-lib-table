@@ -1,0 +1,1 @@
+(fp_lib_table (lib (name "Waveform") (type "KiCad") (uri "${KIPRJMOD}/Waveform.pretty") (options "") (descr "Bundled original KiCad footprints")))
