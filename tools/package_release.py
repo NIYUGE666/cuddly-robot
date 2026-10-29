@@ -34,7 +34,7 @@ with (hw/'BOM_grouped.csv').open('w',newline='') as f:
  w.writerow(['U2',1,'DIP-14 socket (optional)','ACCESSORY','','7.62mm width'])
 license_path=pathlib.Path('/usr/share/doc/kicad-footprints/copyright')
 if license_path.exists():(hw/'LICENSE_KICAD_FOOTPRINTS.txt').write_text('\n'.join(line.rstrip() for line in license_path.read_text().splitlines()).rstrip()+'\n')
-(fab/'README.txt').write_text('Rev A prototype manufacturing output. Source: hardware/waveform.kicad_pcb\n2 layers, FR4 1.6mm, suggested 1oz copper; outline 229 x 231 mm.\nThese are manufacturing graphics, NOT an editable schematic/PCB project.\nNo prototype has been manufactured. Verify dimensions, materials, assembly and import before ordering.\n')
+(fab/'README.txt').write_text('Rev B prototype manufacturing output. Source: hardware/waveform.kicad_pcb\n2 layers, FR4 1.6mm, suggested 1oz copper; outline 229 x 231 mm.\nThese are manufacturing graphics, NOT an editable schematic/PCB project.\nNo prototype has been manufactured. Verify dimensions, materials, assembly and import before ordering.\n')
 release=R/'release';release.mkdir(exist_ok=True)
 def pack(name,items):
  with zipfile.ZipFile(release/name,'w',zipfile.ZIP_DEFLATED,compresslevel=9) as z:
@@ -50,6 +50,7 @@ for f in hw.rglob('*'):
 pack('waveform_KiCad9_import.zip',kfiles+common)
 pack('waveform_EAGLE_XML_import.zip',[(hw/n,n) for n in ['waveform.sch','waveform.brd','BOM.csv','BOM_grouped.csv','LICENSE_KICAD_FOOTPRINTS.txt']]+common)
 pack('waveform_Gerber_prototype.zip',[(f,f.name) for f in fab.iterdir() if f.is_file()])
+for source,target in [('waveform_KiCad9_import.zip','waveform_RevB_wired_KiCad9_import.zip'),('waveform_EAGLE_XML_import.zip','waveform_RevB_wired_EAGLE_XML_import.zip')]:shutil.copyfile(release/source,release/target)
 files=sorted(f for f in release.iterdir() if f.suffix=='.zip')
 (release/'SHA256SUMS.txt').write_text(''.join(hashlib.sha256(f.read_bytes()).hexdigest()+'  '+f.name+'\n' for f in files))
 (R/'validation/packages.json').write_text(json.dumps({'ZIP_CRC_checks_passed':True,'files':[{'name':f.name,'bytes':f.stat().st_size,'sha256':hashlib.sha256(f.read_bytes()).hexdigest()} for f in files],'native_epro_created':False,'EasyEDA_Pro_GUI_import':'NOT RUN'},indent=2))

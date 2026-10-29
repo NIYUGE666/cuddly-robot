@@ -3,18 +3,28 @@
   "files": [
     {
       "name": "waveform_EAGLE_XML_import.zip",
-      "bytes": 59694,
-      "sha256": "691b17a63958a11354672128440e2a4dccbaf328d2fd294116e8a4244e090feb"
+      "bytes": 69412,
+      "sha256": "1ea3ea9660a69ab499b23dcd4e6f190cfdf291ad0cecd58d372997e047e71194"
     },
     {
       "name": "waveform_Gerber_prototype.zip",
-      "bytes": 135863,
-      "sha256": "20be663583b15a3f070678f4650ac03f1b6745f9a60dcbcdb994baec94809ee6"
+      "bytes": 135878,
+      "sha256": "f94e48faef4634eefc54d12cb40693f7bb24c3d16603db9db12e76f40a244a69"
     },
     {
       "name": "waveform_KiCad9_import.zip",
-      "bytes": 306981,
-      "sha256": "5fdf79bb749f7a8d5ff6b92d5b5b35f86901e30f5f35f077deef4cc0164bbe82"
+      "bytes": 308292,
+      "sha256": "ddbbff28b6f4b239dca96ef17962e90554f40ff5adf825c697b31fad8d914432"
+    },
+    {
+      "name": "waveform_RevB_wired_EAGLE_XML_import.zip",
+      "bytes": 69412,
+      "sha256": "1ea3ea9660a69ab499b23dcd4e6f190cfdf291ad0cecd58d372997e047e71194"
+    },
+    {
+      "name": "waveform_RevB_wired_KiCad9_import.zip",
+      "bytes": 308292,
+      "sha256": "ddbbff28b6f4b239dca96ef17962e90554f40ff5adf825c697b31fad8d914432"
     }
   ],
   "native_epro_created": false,

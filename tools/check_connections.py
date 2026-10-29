@@ -25,7 +25,7 @@ for part in physical:
   actual=pins[(part['ref'],pin)]
   if net is None:
    assert actual.startswith('unconnected-'),(part['ref'],pin,actual)
-  else:assert actual==net,(part['ref'],pin,net,actual)
+  else:assert actual.lstrip('/')==net,(part['ref'],pin,net,actual)
   assert bpins[pin]==actual,('PCB/schematic mismatch',part['ref'],pin,bpins[pin],actual)
   checked+=1
 parts={p['ref']:p for p in physical}

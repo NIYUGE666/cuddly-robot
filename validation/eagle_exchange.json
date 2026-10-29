@@ -10,5 +10,5 @@
   "KiCad_DRC_does_not_validate_exchange_import": true,
   "KiCad_EAGLE_PCB_import": true,
   "roundtrip_pads_agree": true,
-  "roundtrip_board": "/tmp/waveform-eagle-9gq0z3t9/roundtrip.kicad_pcb"
+  "roundtrip_board": "/tmp/waveform-eagle-5sxg69f8/roundtrip.kicad_pcb"
 }

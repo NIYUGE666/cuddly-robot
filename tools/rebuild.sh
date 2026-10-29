@@ -9,4 +9,5 @@ mkdir -p "$XDG_CONFIG_HOME" "$XDG_CACHE_HOME" "$XDG_DATA_HOME"
 cd "$task_root"
 /usr/bin/python3 tools/build_design.py
 /usr/bin/python3 tools/route_board.py
+/usr/bin/python3 tools/draw_schematics.py
 bash tools/validate.sh

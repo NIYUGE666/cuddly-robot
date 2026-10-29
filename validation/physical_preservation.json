@@ -1,0 +1,9 @@
+{
+  "baseline": "b5e8f53",
+  "PCB_tracks_vias_positions_widths_nets_preserved": true,
+  "PCB_pads_positions_sizes_drills_nets_preserved": true,
+  "physical_pins": 491,
+  "tracks_and_vias": 2673,
+  "normalized_snapshot_sha256": "6e4f6918d7b7d4689bc9e79639ff938e9afc3d50c9d29c3dd50ab80f172d22a7",
+  "metadata_change": "Flattened schematic UUID paths; KiCad local-net root prefix /"
+}

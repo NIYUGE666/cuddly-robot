@@ -8,8 +8,8 @@ import ast,collections,copy,json,pathlib,xml.etree.ElementTree as E
 import pcbnew as p
 R=pathlib.Path(__file__).resolve().parents[1]
 data=json.loads((R/'circuit.json').read_text());parts=[a for a in data['parts'] if a['kind']!='FLAG']
-tree=ast.parse((R/'tools/build_design.py').read_text())
-pins=next(ast.literal_eval(n.value) for n in tree.body if isinstance(n,ast.Assign) and any(isinstance(t,ast.Name) and t.id=='pins' for t in n.targets))
+layout=json.loads((R/'schematic_layout.json').read_text())
+pins=layout['symbol_pins']
 b=p.LoadBoard(str(R/'hardware/waveform.kicad_pcb'));fps={f.GetReference():f for f in b.GetFootprints()}
 def elem(parent,tag,**attrs):return E.SubElement(parent,tag,{k.rstrip('_'):str(v) for k,v in attrs.items()})
 def mm(i):return round(p.ToMM(i),6)
@@ -44,7 +44,7 @@ def library(parent):
   for field,layer,text in [(f.Reference(),25,'>NAME'),(f.Value(),27,'>VALUE')]:
    delta=field.GetPosition()-pos
    elem(pk,'text',x=mm(delta.x),y=-mm(delta.y),size=round(mm(field.GetTextHeight())/.86,6),layer=layer,align='center',ratio=14).text=text
- for kind in sorted({a['kind'] for a in parts}):
+ for kind in sorted(set(pins)-{'FLAG'}):
   sym=elem(symbols,'symbol',name=kind)
   for no,x,y,ang,typ,nm in pins[kind]:
    direction={'passive':'pas','input':'in','output':'out','power_in':'pwr','open_collector':'oc'}[typ]
@@ -56,20 +56,27 @@ def library(parent):
    wire(sym,-.635,-2.54,-.635,2.54,94);wire(sym,.635,-2.54,.635,2.54,94)
    wire(sym,-2.54,0,-.635,0,94);wire(sym,.635,0,2.54,0,94)
    if kind=='CP':elem(sym,'text',x=-2,y=3,size=1,layer=94).text='+'
-  elif kind=='TL082':
-   for y in [5.08,-5.08]:
-    for a,z in [((-7.62,y+3.81),(-7.62,y-3.81)),((-7.62,y+3.81),(7.62,y)),((-7.62,y-3.81),(7.62,y))]:wire(sym,*a,*z,94)
+  elif kind in ['TL082_A','TL082_B']:
+   for a,z in [((-5.08,5.08),(-5.08,-5.08)),((-5.08,5.08),(5.08,0)),((-5.08,-5.08),(5.08,0))]:wire(sym,*a,*z,94)
+  elif kind=='TL082_P':
+   for a,z in [((-1.27,2.54),(-1.27,-2.54)),((-1.27,-2.54),(1.27,-2.54)),((1.27,-2.54),(1.27,2.54)),((1.27,2.54),(-1.27,2.54))]:wire(sym,*a,*z,94)
   elif kind=='TP':elem(sym,'circle',x=0,y=0,radius=.8,width=.15,layer=94)
   else:
    x,y={'NE555':(10.16,12.7),'4013':(12.7,17.78),'CONN2':(2.54,5.08),'CONN3':(2.54,5.08)}[kind]
    for a,z in [((-x,-y),(x,-y)),((x,-y),(x,y)),((x,y),(-x,y)),((-x,y),(-x,-y))]:wire(sym,*a,*z,94)
-  elem(sym,'text',x=0,y=23 if kind=='4013' else 18 if kind in ['NE555','TL082'] else 9,size=1.1,layer=95,align='bottom-center').text='>NAME'
-  elem(sym,'text',x=0,y=-23 if kind=='4013' else -19 if kind in ['NE555','TL082'] else -8,size=1.1,layer=96,align='top-center').text='>VALUE'
-  ds=elem(devices,'deviceset',name=kind,prefix={'TL082':'U','NE555':'U','4013':'U','R':'R','C':'C','CP':'C','POT':'RV','CONN2':'J','CONN3':'J','TP':'TP'}[kind],uservalue='yes')
-  gs=elem(ds,'gates');elem(gs,'gate',name='G$1',symbol=kind,x=0,y=0)
+  elem(sym,'text',x=0,y=23 if kind=='4013' else 18 if kind=='NE555' else 9,size=1.1,layer=95,align='bottom-center').text='>NAME'
+  elem(sym,'text',x=0,y=-23 if kind=='4013' else -19 if kind=='NE555' else -9,size=1.1,layer=96,align='top-center').text='>VALUE'
+ for kind in sorted({a['kind'] for a in parts}):
+  prefix={'TL082':'U','NE555':'U','4013':'U','R':'R','C':'C','CP':'C','POT':'RV','CONN2':'J','CONN3':'J','TP':'TP'}[kind]
+  ds=elem(devices,'deviceset',name=kind,prefix=prefix,uservalue='yes')
+  keys=[kind] if kind!='TL082' else ['TL082_A','TL082_B','TL082_P']
+  gates=['G$1'] if kind!='TL082' else ['A','B','P']
+  gs=elem(ds,'gates')
+  for key,gate in zip(keys,gates):elem(gs,'gate',name=gate,symbol=key,x=0,y=0)
   devs=elem(ds,'devices');ex=next(a for a in parts if a['kind']==kind);pkname=fps[ex['ref']].GetFPID().GetLibItemName()
   dev=elem(devs,'device',name='',package=pkname);cs=elem(dev,'connects')
-  for pin,*_ in pins[kind]:elem(cs,'connect',gate='G$1',pin=pin,pad=pin)
+  for key,gate in zip(keys,gates):
+   for pin,*_ in pins[key]:elem(cs,'connect',gate=gate,pin=pin,pad=pin)
   ts=elem(dev,'technologies');elem(ts,'technology',name='')
  return lib
 def classes(parent):
@@ -83,23 +90,27 @@ e,d=base();sch=elem(d,'schematic',xreflabel='%F%N/%S.%C%R',xrefpart='/ %S.%C%R')
 libs=elem(sch,'libraries');library(libs);elem(sch,'attributes');elem(sch,'variantdefs');classes(sch)
 ps=elem(sch,'parts')
 for part in parts:elem(ps,'part',name=part['ref'],library='Waveform',deviceset=part['kind'],device='',value=part['value'])
-sheets=elem(sch,'sheets')
-for name in ['source','harmonic_1','harmonic_3','harmonic_5','harmonic_7','power_sum']:
- sheet=elem(sheets,'sheet');plain=elem(sheet,'plain');elem(plain,'text',x=10,y=410,size=2,layer=97).text='Waveform synthesis: '+name+' (VCC=+12V, VEE=-12V)'
- insts=elem(sheet,'instances');ns=elem(sheet,'nets');by_net=collections.defaultdict(list)
- for part in parts:
-  if part['sheet']!=name:continue
-  x,y=part['sch_xy'];y=420-y;elem(insts,'instance',part=part['ref'],gate='G$1',x=x,y=y,smashed='no')
-  for no,dx,dy,ang,*_ in pins[part['kind']]:
-   net=part['nets'][str(no)]
-   if net is not None:by_net[net].append((part,no,x+dx,y+dy,ang))
- for net,items in sorted(by_net.items()):
-  ne=elem(ns,'net',name=net,class_=0)
-  for part,no,x,y,ang in items:
-   seg=elem(ne,'segment');elem(seg,'pinref',part=part['ref'],gate='G$1',pin=no)
-   dx,dy={0:(-15.24,0),180:(15.24,0),90:(0,-2.54),270:(0,2.54)}[ang]
-   wire(seg,x,y,round(x+dx,6),round(y+dy,6),91,.1524)
-   elem(seg,'label',x=round(x+dx,6),y=round(y+dy,6),size=.95,layer=95,rot='R0',xref='no')
+sheets=elem(sch,'sheets');sheet=elem(sheets,'sheet');plain=elem(sheet,'plain')
+for t in layout['texts']:elem(plain,'text',x=t['x'],y=841-t['y'],size=t['size'],layer=97).text=t['text']
+for g in layout['graphics']:wire(plain,g['a'][0],841-g['a'][1],g['b'][0],841-g['b'][1],94,.254)
+insts=elem(sheet,'instances');ns=elem(sheet,'nets');by_net=collections.defaultdict(list)
+manifest={part['ref']:part for part in parts}
+for inst in layout['instances']:
+ if inst['kind']=='FLAG':continue
+ gate={1:'A',2:'B',3:'P'}[inst['unit']] if inst['kind']=='TL082' else 'G$1'
+ elem(insts,'instance',part=inst['ref'],gate=gate,x=inst['x'],y=841-inst['y'],smashed='no',rot='R'+str(inst['angle']))
+ for pin in inst['pins']:
+  net=manifest[inst['ref']]['nets'][pin]
+  if net is not None:by_net[net].append((inst['ref'],gate,pin))
+for net,items in sorted(by_net.items()):
+ ne=elem(ns,'net',name=net,class_=0);seg=elem(ne,'segment')
+ for ref,gate,pin in items:elem(seg,'pinref',part=ref,gate=gate,pin=pin)
+ for w in layout['wires']:
+  if w['net']==net:wire(seg,w['a'][0],841-w['a'][1],w['b'][0],841-w['b'][1],91,.1524)
+ for label in layout['labels']:
+  if label['net']==net:elem(seg,'label',x=label['x'],y=841-label['y'],size=1.016,layer=95,rot='R0',xref='no')
+ for j in layout['junctions']:
+  if j['net']==net:elem(seg,'junction',x=j['x'],y=841-j['y'])
 elem(sch,'errors');schpath=save(e,'waveform.sch')
 e,d=base();brd=elem(d,'board');plain=elem(brd,'plain')
 def xy(v):return mm(v.x)-2,233-mm(v.y)
@@ -120,7 +131,7 @@ for part in parts:
   elem(ss[net],'contactref',element=part['ref'],pad=pin)
 tracks=0;vias=0
 for t in b.GetTracks():
- net=t.GetNetname()
+ net=t.GetNetname().lstrip('/')
  if isinstance(t,p.PCB_VIA):
   x,y=xy(t.GetPosition());elem(ss[net],'via',x=x,y=y,extent='1-16',drill=mm(t.GetDrillValue()),diameter=mm(t.GetWidth(p.F_Cu)),shape='round');vias+=1
  else:wire(ss[net],*xy(t.GetStart()),*xy(t.GetEnd()),1 if t.GetLayer()==p.F_Cu else 16,mm(t.GetWidth()));tracks+=1
